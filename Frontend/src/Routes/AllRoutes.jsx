@@ -1,8 +1,8 @@
-import LogIn from '../Routes/LogIn'
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Help from '../Components/Help'
-import SignIn from '../Routes/SignIn'
+import Register from '../pages/register/Register'
+import Login from '../pages/login/Login'
 import SinglePage from '../Components/SinglePage'
 import ProductPage from '../Routes/ProductPage'
 import Homepage from './Homepage'
@@ -14,6 +14,10 @@ import Search from '../Components/Search'
 import CardDetail from '../Routes/CardDetail'
 import OTP from './OTP'
 import ProtectedRoute from '../Components/ProtectedRoute'
+import Profile from '../pages/profile/Profile'
+import AddNewTodo from '../pages/addTodo/addNewTodo'
+import Dashboard from '../pages/dashboard/Dashboard'
+
 const AllRoutes = () => {
   return (
     <Routes>
@@ -21,8 +25,11 @@ const AllRoutes = () => {
       <Route path='/product/:id' element={<SinglePage />}></Route>
       <Route path='/help' element={<Help />}></Route>
       <Route path='/company' element={<Companylogin/>}></Route>
-      <Route path='/login' element={<LogIn />} />
-      <Route path='/signin' element={<SignIn />} />
+      <Route path='/login' element={<Login />} />
+      <Route path='/profile' element={<Profile />} />
+      <Route path='/dashboard' element={<Dashboard />} />
+      <Route path='/addtodo' element={<AddNewTodo />} />
+      <Route path='/signin' element={<Register />} />
       <Route path='/cart' element={<Cart />}></Route>
       {/* <Route path='/cart' element={<ProtectedRoute><Cart /></ProtectedRoute>}></Route> */}
       <Route path='/checkout' element={<Checkout />}></Route>
